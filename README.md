@@ -1,4 +1,4 @@
-<b>Original Assignment</b><br>:
+<b>Original Assignment</b>:<br>
 As mentioned, we would like to present you with a technical task. This is not pass fail, rather 
 a way of getting a better feel for your development skills and approach to problem solving.
 
@@ -41,7 +41,7 @@ stored as a plain file on disk. Your code will run on a single 12-core server.
 - npm install cluster --save
 - npm install multer --save
 
-<b>Micro Tasks</b>:
+<b>Micro Tasks</b>:<br>
 1) DONE. Setup Github repo<br>
 2) DONE. Install node (if I don't already have it on here)<br>
 3) DONE. get a server running... use cluster and express most likely?<br>
@@ -51,10 +51,10 @@ stored as a plain file on disk. Your code will run on a single 12-core server.
      - DONE. Return the actual file<br>
      - DEFERRED. Return a status code?... skip for now maybe?<br>
 6) DONE. Create Write .post()<br>
-   - DONE. multer?<br>
+     - DONE. multer?<br>
 7) DONE. Save Upload as filename-timestamp-rand(1,10), then move to filename<br>
 
-<b>Activity Notes</b>:
+<b>Activity Notes</b>:<br>
 3:07: Git clone created, node/npm installed...need to get a server going in node.<br>
 3:14: Knocked out most of the initial setups... <br>
 3:15: ... now need to make sure it hits all processors... <br>
@@ -104,3 +104,4 @@ stored as a plain file on disk. Your code will run on a single 12-core server.
 - Fastest way to handle writes in node?  Is there even an answer to this question?
 - How to handle session/ownership for file revisions?
 - How to roll out updates to all the servers?
+- How would I improve upon the fileupload->store a copy->create a copy->mv extra copy workflow over the "real" file workflow?
