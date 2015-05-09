@@ -1,4 +1,4 @@
-<b>Original Assignment</b>
+<b>Original Assignment</b>:
 As mentioned, we would like to present you with a technical task. This is not pass fail, rather 
 a way of getting a better feel for your development skills and approach to problem solving.
 
@@ -34,14 +34,14 @@ stored as a plain file on disk. Your code will run on a single 12-core server.
 - DONE. Persist the files as a plane file on disk
 - DONE. Use all processors on the server
 
-Generic Steps:
+<b>Generic Steps</b>:
 - Install node
 - Install npm
 - npm install express --save
 - npm install cluster --save
 - npm install multer --save
 
-Steps:
+<b>Micro Tasks</b>:
 1) DONE. Setup Github repo
 2) DONE. Install node (if I don't already have it on here)
 3) DONE. get a server running... use cluster and express most likely?
@@ -54,7 +54,7 @@ Steps:
    - DONE. multer?
 7) DONE. Save Upload as filename-timestamp-rand(1,10), then move to filename
 
-Activity Notes:
+<b>Activity Notes</b>:
 3:07: Git clone created, node/npm installed...need to get a server going in node.
 3:14: Knocked out most of the initial setups... 
 3:15: ... now need to make sure it hits all processors... 
@@ -74,8 +74,9 @@ Activity Notes:
 4:09: Done.. now let's move it over the "real" one.
 4:22: Writing up Architecture specs... wasted 10 minutes thinking about "what next". Better to just write it out.
 4:37: Cleaning up a bit.
+4:47: Finishing up on README.md
 
-Architecture Chicken Scratch Thoughts:
+<b>Architecture Chicken Scratch Thoughts</b>:
 - Load Balancer in front checking for heartbeat on the servers
 - N number of servers
 - NFS volume mounted on the servers, high speed pipeline connecting servers to NFS mount
@@ -85,7 +86,7 @@ Architecture Chicken Scratch Thoughts:
 - I'm assuming that we'll have subdomain api.wikimedia.com/ pointing to this server.
 - I'm using all of the processors on the machine with Cluster
 
-Misc Thoughts:
+<b>Misc Thoughts</b>:
 - I can't think of a better way in this time frame to handle so many writes besides allowing the writing of distinct files and then mv them.  My code cp's them, but I think it'd be better to mv the file in this case rather than cp now that I'm thinking about it.  Ran out of time, however.
 - I didn't properly spec out a REST API all the way so I could prove that I have chops rather than tech writing ability.  But pfft, anyone can write docs amiright!?
 - This system allows use of all processors for gets.  The processors will fight eachother to react to the requests first.
@@ -93,11 +94,11 @@ Misc Thoughts:
 - I'd like to be able to test this, but couldn't a "good enough" test + write the code in 1-2 hours.  I used siege and it performed pretty well. 
 - Due to a lack of tests and time, I can't properly confirm this will handle 20k requests per second (I'm guessing it won't).  I suspect it will handle 10 writes per second, but I have run out of time to test that as well.
 
-Answered Questions
+<b>Answered Questions</b>:
 - Do we want to write synchronously? Answer: Probably not... at least not with Node's writeFileSync at least.
 - How to handle revisioning?... out of scope? Answer: Did a very generic solution for this
 
-Unanswered Questions:
+<b>Unanswered Questions</b>:
 - How fast can we write a file?
 - Do we need multiple servers?.. or will one do?
 - Fastest way to handle writes in node?  Is there even an answer to this question?
