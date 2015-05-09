@@ -1,4 +1,4 @@
-<b>Original Assignment</b>:
+<b>Original Assignment</b><br>:
 As mentioned, we would like to present you with a technical task. This is not pass fail, rather 
 a way of getting a better feel for your development skills and approach to problem solving.
 
@@ -42,39 +42,39 @@ stored as a plain file on disk. Your code will run on a single 12-core server.
 - npm install multer --save
 
 <b>Micro Tasks</b>:
-1) DONE. Setup Github repo
-2) DONE. Install node (if I don't already have it on here)
-3) DONE. get a server running... use cluster and express most likely?
-4) DONE. Make it use all processors.
-5) DONE. Create Read .get()
-     - DONE. function fibonacciDance()
-     - DONE. Return the actual file
-     - DEFERRED. Return a status code?... skip for now maybe?
-6) DONE. Create Write .post()
-   - DONE. multer?
-7) DONE. Save Upload as filename-timestamp-rand(1,10), then move to filename
+1) DONE. Setup Github repo<br>
+2) DONE. Install node (if I don't already have it on here)<br>
+3) DONE. get a server running... use cluster and express most likely?<br>
+4) DONE. Make it use all processors.<br>
+5) DONE. Create Read .get()<br>
+     - DONE. function fibonacciDance()<br>
+     - DONE. Return the actual file<br>
+     - DEFERRED. Return a status code?... skip for now maybe?<br>
+6) DONE. Create Write .post()<br>
+   - DONE. multer?<br>
+7) DONE. Save Upload as filename-timestamp-rand(1,10), then move to filename<br>
 
 <b>Activity Notes</b>:
-3:07: Git clone created, node/npm installed...need to get a server going in node.
-3:14: Knocked out most of the initial setups... 
-3:15: ... now need to make sure it hits all processors... 
-3:16: ... get a feel for how many requests it can handle.
-3:19: Running siege to see if it can handle requests.. I may be rusty on this command though.
-      ... kinda failed on the above, will come back to it later
-3:20: Going to tackle recursive fibonacci...
-3:27: Done with fibo, moving onto returning file on .get.
-3:28: Before the above, we need to make a file first.
-3:31: 10k test file created... back to returning this file on .get
-3:35: testing...
-3:37: Retrieving file correctly now.
-3:42: Committed to git.
-3:43: Need to write a file from post.
-3:48: I have the write code, need syntax to test with curl.
-3:58: It's uploading correctly, now we'll want to... write file with some kind of revision'ish name
-4:09: Done.. now let's move it over the "real" one.
-4:22: Writing up Architecture specs... wasted 10 minutes thinking about "what next". Better to just write it out.
-4:37: Cleaning up a bit.
-4:47: Finishing up on README.md
+3:07: Git clone created, node/npm installed...need to get a server going in node.<br>
+3:14: Knocked out most of the initial setups... <br>
+3:15: ... now need to make sure it hits all processors... <br>
+3:16: ... get a feel for how many requests it can handle.<br>
+3:19: Running siege to see if it can handle requests.. I may be rusty on this command though.<br>
+      ... kinda failed on the above, will come back to it later<br>
+3:20: Going to tackle recursive fibonacci...<br>
+3:27: Done with fibo, moving onto returning file on .get.<br>
+3:28: Before the above, we need to make a file first.<br>
+3:31: 10k test file created... back to returning this file on .get<br>
+3:35: testing...<br>
+3:37: Retrieving file correctly now.<br>
+3:42: Committed to git.<br>
+3:43: Need to write a file from post.<br>
+3:48: I have the write code, need syntax to test with curl.<br>
+3:58: It's uploading correctly, now we'll want to... write file with some kind of revision'ish name<br>
+4:09: Done.. now let's move it over the "real" one.<br>
+4:22: Writing up Architecture specs... wasted 10 minutes thinking about "what next". Better to just write it out.<br>
+4:37: Cleaning up a bit.<br>
+4:47: Finishing up on README.md<br>
 
 <b>Architecture Chicken Scratch Thoughts</b>:
 - Load Balancer in front checking for heartbeat on the servers
