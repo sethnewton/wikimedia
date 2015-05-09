@@ -1,4 +1,4 @@
-Assignment:
+<b>Original Assignment</b>
 As mentioned, we would like to present you with a technical task. This is not pass fail, rather 
 a way of getting a better feel for your development skills and approach to problem solving.
 
@@ -22,7 +22,7 @@ emerge (up to 10 attempted edits/s). Editing happens by downloading the current 
 the text, modifying it and posting it back to the API. The article contains HTML, and should be persisted 
 stored as a plain file on disk. Your code will run on a single 12-core server.
 
-Acceptence Criteria:
+<b>Acceptence Criteria</b>:
 - Intention is to get a sense for dev skills, don't overengineer
 - complete in 1-2 hours
 - DONE. Git repo needed
