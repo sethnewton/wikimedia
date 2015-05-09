@@ -1,4 +1,4 @@
-<b>VIDEO of my session</b>: <a href="http://WikiPedia-Test-SethNewton-2Hours-Caution-BIGFILE.mp4">Here &gt;&gt;</a>
+<b>VIDEO of my session</b>: <a href="http://72.44.93.173/WikiPedia-Test-SethNewton-2Hours-Caution-BIGFILE.mp4">Here &gt;&gt;</a>
 
 <b>Original Assignment</b>:<br>
 As mentioned, we would like to present you with a technical task. This is not pass fail, rather 
