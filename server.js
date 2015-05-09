@@ -17,10 +17,21 @@ if (cluster.isMaster) {
 
     // Include Express
     var express = require('express');
+    var multer = require('multer');
     var fs = require('fs');
 
     // Create a new Express application
     var app = express();
+		app.use(multer({ 
+			dest: './uploads/',
+			rename: function (fieldname, filename) {
+				return "Latest_plane_crash" + '-' + Date.now() + '-' + random(1,10);
+			},
+			onFileUploadComplete: function (file, req, res) {
+				// cp	file.path data/Latest_plane_crash
+				fs.createReadStream(file.path).pipe(fs.createWriteStream('data/Latest_plane_crash'));
+			}
+		}));
 
     // Retrieve our file.  Cheating on the route for now, would be more complex if this were a true API.
     app.get('/get/Latest_plane_crash', function (req, res) {
@@ -34,9 +45,11 @@ if (cluster.isMaster) {
     });
 
     // Write to our file on a post.
-    app.post('/post/Latest_plane_crash', function (req, res) {
-        res.send('POST');
-    });
+		app.post('/post/Latest_plane_crash',[ multer(), function(req, res){
+	    console.log(req.body) // form fields
+  	  console.log(req.files) // form files
+    	res.send('Completed');
+		}]);
 
     // Bind to a port
     app.listen(3000);
@@ -49,5 +62,9 @@ if (cluster.isMaster) {
 				return 1;
 			else
 				return fibonacci(number - 1) + fibonacci(number - 2);
+		}
+
+		function random (low, high) {
+	    return Math.random() * (high - low) + low;
 		}
 }
